@@ -1,0 +1,200 @@
+linkways:
+  - link:
+    - location: "TLAB"
+      floor: 6
+    - location: "E3"
+      floor: 6
+    accessible: true
+    shelter: true
+
+  - link:
+    - location: "E3"
+      floor: 6
+    - location: "E4"
+      floor: 4
+    accessible: true
+    shelter: true
+
+  - link:
+    - location: "E4"
+      floor: 6
+    - location: "E4A"
+      floor: 7
+    accessible: true
+    shelter: true
+
+  - link:
+    - location: "E4A"
+      floor: 7
+    - location: "E8"
+      floor: 7
+    shelter: true
+    accessible: false
+
+  - link:
+    - location: "E4A"
+      floor: 1
+    - location: "E8"
+      floor: 1
+    shelter: false
+    accessible: true
+
+  - link:
+    - location: "E4"
+      floor: 4
+    - location: "E1"
+      floor: 4
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E1"
+      floor: 4
+    - location: "Techno Edge"
+      floor: 3
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E1"
+      floor: 4
+    - location: "E2"
+      floor: -1
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E2"
+      floor: 3
+    - location: "E2A"
+      floor: 2
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E1"
+      floor: 4
+    - location: "E1A"
+      floor: 4
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E1A"
+      floor: 3
+    - location: "E2"
+      floor: -2
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E1A"
+      floor: 4
+    - location: "EA"
+      floor: 7
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "EA"
+      floor: 1
+    - location: "E3A"
+      floor: 1
+    shelter: true
+    accessible: true
+  
+  - link:
+    - location: "E8"
+      floor: 1
+    - location: "E7"
+      floor: -3
+    shelter: false
+    accessible: true
+
+  - link:
+    - location: "E4A"
+      floor: 1
+    - location: "E7"
+      floor: 3
+    shelter: false
+    accessible: false
+
+  - link:
+    - location: "E4"
+      floor: 4
+    - location: "E5"
+      floor: 1
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "E5"
+      floor: 1
+    - location: "CLB Bridge"
+      floor: 0
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "CLB Bridge"
+      floor: 0
+    - location: "CLB"
+      floor: 6
+    shelter: true
+    accessible: false
+
+  - link:
+    - location: "CLB"
+      floor: 4
+    - location: "AS6"
+      floor: 2
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "CLB"
+      floor: 1
+    - location: "AS6"
+      floor: 1
+    shelter: true
+    accessible: false
+
+  - link:
+    - location: "AS6"
+      floor: 1
+    - location: "COM1"
+      floor: 2
+    shelter: true
+    accessible: false
+
+  - link:
+    - location: "AS6"
+      floor: 1
+    - location: "COM1"
+      floor: 1
+    shelter: false
+    accessible: true
+
+  - link:
+    - location: "COM1"
+      floor: 1
+    - location: "COM2"
+      floor: 1
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "COM1"
+      floor: 1
+    - location: "COM3"
+      floor: 1
+    shelter: true
+    accessible: true
+
+  - link:
+    - location: "COM2"
+      floor: 1
+    - location: "COM3"
+      floor: 1
+    shelter: true
+    accessible: true
