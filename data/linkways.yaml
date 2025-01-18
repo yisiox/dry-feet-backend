@@ -136,6 +136,14 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+
+  - link:
+    - location: "EA"
+      floor: 6
+    - location: "E2"
+      floor: -2
+    shelter: true
+    accessible: true
   
   - link:
     - location: "E8"
