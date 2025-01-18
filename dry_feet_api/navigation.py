@@ -32,7 +32,7 @@ class Navigation:
     def __init__(self) -> None:
         with open(DATA_YAML_FILE, 'r') as f:
             edges: list[Edge] = [Edge(raw_edge)
-                                 for raw_edge in yaml.load(f)['linkways']]
+                                 for raw_edge in yaml.load(f, Loader=yaml.Loader)['linkways']]
             self.graph: dict[Location, list[Edge]] = defaultdict(list)
             for edge in edges:
                 location1, location2 = edge.get_locations()
