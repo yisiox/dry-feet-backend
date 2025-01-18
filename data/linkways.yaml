@@ -6,6 +6,7 @@ linkways:
       floor: 6
     accessible: true
     shelter: true
+    description: "may require student card"
 
   - link:
     - location: "E3"
@@ -70,6 +71,30 @@ linkways:
       floor: 2
     shelter: true
     accessible: true
+  
+  - link:
+    - location: "E2"
+      floor: 2
+    - location: "E2A"
+      floor: 1
+    shelter: false
+    accessible: true
+
+  - link:
+    - location: "E2A"
+      floor: 1
+    - location: "E1"
+      floor: 4
+    shelter: false
+    accessible: false
+
+  - link:
+    - location: "E2A"
+      floor: 1
+    - location: "E4"
+      floor: 4
+    shelter: false
+    accessible: false
 
   - link:
     - location: "E1"
@@ -90,10 +115,19 @@ linkways:
   - link:
     - location: "E1A"
       floor: 4
+    - location: "E2"
+      floor: -1
+    shelter: false
+    accessible: true
+
+  - link:
+    - location: "E1A"
+      floor: 4
     - location: "EA"
       floor: 7
     shelter: true
     accessible: true
+    description: "also connected on other floors"
 
   - link:
     - location: "EA"
@@ -110,6 +144,7 @@ linkways:
       floor: -3
     shelter: false
     accessible: true
+    description: "via the road"
 
   - link:
     - location: "E4A"
@@ -118,6 +153,7 @@ linkways:
       floor: 3
     shelter: false
     accessible: false
+    description: "via the footpath"
 
   - link:
     - location: "E4"
@@ -134,6 +170,14 @@ linkways:
       floor: 0
     shelter: true
     accessible: true
+
+  - link:
+    - location: "E5"
+      floor: 1
+    - location: "Techno Edge"
+      floor: 1
+    - shelter: false
+    - accessible: false
 
   - link:
     - location: "CLB Bridge"
@@ -182,6 +226,7 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+    description: "may require student card; also connected on the 2nd floor"
 
   - link:
     - location: "COM1"
