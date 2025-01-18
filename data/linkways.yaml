@@ -7,6 +7,15 @@ linkways:
     accessible: true
     shelter: true
     description: "may require student card"
+    points:
+      - - 103.7721347
+        - 1.2997739
+      - - 103.7722276
+        - 1.2995758
+      - - 103.7717223
+        - 1.2993421
+      - - 103.7716109
+        - 1.2995927
 
   - link:
     - location: "E3"
@@ -15,6 +24,25 @@ linkways:
       floor: 4
     accessible: true
     shelter: true
+    points:
+      - - 103.7716109
+        - 1.2995927
+      - - 103.7717223
+        - 1.2993421
+      - - 103.7717442
+        - 1.2992901
+      - - 103.771594
+        - 1.2992311
+      - - 103.7717041
+        - 1.2989393
+      - - 103.7718328
+        - 1.2986872
+      - - 103.7718623
+        - 1.2986322
+      - - 103.7721781
+        - 1.2985155
+      - - 103.772341
+        - 1.2984545
 
   - link:
     - location: "E4"
@@ -23,6 +51,17 @@ linkways:
       floor: 7
     accessible: true
     shelter: true
+    points:
+      - - 103.772341
+        - 1.2984545
+      - - 103.7721809
+        - 1.2985139
+      - - 103.7722328
+        - 1.2986618
+      - - 103.7724298
+        - 1.2987168
+      - - 103.7726033
+        - 1.2986484
 
   - link:
     - location: "E4A"
@@ -31,6 +70,17 @@ linkways:
       floor: 7
     shelter: true
     accessible: false
+    points:
+      - - 103.7725487
+        - 1.2991718
+      - - 103.7726591
+        - 1.298934
+      - - 103.7723855
+        - 1.2988107
+      - - 103.7724298
+        - 1.2987168
+      - - 103.7726033
+        - 1.2986484
 
   - link:
     - location: "E4A"
@@ -39,6 +89,17 @@ linkways:
       floor: 1
     shelter: false
     accessible: true
+    points:
+      - - 103.7725487
+        - 1.2991718
+      - - 103.7726591
+        - 1.298934
+      - - 103.7723855
+        - 1.2988107
+      - - 103.7724298
+        - 1.2987168
+      - - 103.7726033
+        - 1.2986484
 
   - link:
     - location: "E4"
@@ -47,6 +108,19 @@ linkways:
       floor: 4
     shelter: true
     accessible: true
+    points:
+      - - 103.772341
+        - 1.2984545
+      - - 103.7718623
+        - 1.2986322
+      - - 103.7718328
+        - 1.2986872
+      - - 103.7713902
+        - 1.2984935
+      - - 103.771311
+        - 1.2984578
+      - - 103.7711673
+        - 1.2987405
 
   - link:
     - location: "E1"
@@ -55,6 +129,17 @@ linkways:
       floor: 3
     shelter: true
     accessible: true
+    points:
+      - - 103.7711673
+        - 1.2987405
+      - - 103.771311
+        - 1.2984578
+      - - 103.7713902
+        - 1.2984935
+      - - 103.7714707
+        - 1.2982884
+      - - 103.7715203
+        - 1.298027
 
   - link:
     - location: "E1"
@@ -63,6 +148,15 @@ linkways:
       floor: -1
     shelter: true
     accessible: true
+    points:
+      - - 103.7711673
+        - 1.2987405
+      - - 103.7710681
+        - 1.2989681
+      - - 103.771339
+        - 1.2990901
+      - - 103.7712986
+        - 1.2991723
 
   - link:
     - location: "E2"
@@ -71,6 +165,17 @@ linkways:
       floor: 2
     shelter: true
     accessible: true
+    points:
+      - - 103.7712986
+        - 1.2991723
+      - - 103.771339
+        - 1.2990901
+      - - 103.7713767
+        - 1.2990041
+      - - 103.7714343
+        - 1.2990256
+      - - 103.7714915
+        - 1.2988567
 
   - link:
     - location: "E2"
@@ -79,6 +184,17 @@ linkways:
       floor: 1
     shelter: false
     accessible: true
+    points:
+      - - 103.7712986
+        - 1.2991723
+      - - 103.771339
+        - 1.2990901
+      - - 103.7713767
+        - 1.2990041
+      - - 103.7714343
+        - 1.2990256
+      - - 103.7714915
+        - 1.2988567
 
   - link:
     - location: "E2A"
@@ -87,6 +203,17 @@ linkways:
       floor: 4
     shelter: false
     accessible: false
+    points:
+      - - 103.7712986
+        - 1.2991723
+      - - 103.771339
+        - 1.2990901
+      - - 103.7711245
+        - 1.2989916
+      - - 103.7710681
+        - 1.2989681
+      - - 103.7711673
+        - 1.2987405
 
   - link:
     - location: "E2A"
@@ -95,6 +222,15 @@ linkways:
       floor: 4
     shelter: false
     accessible: false
+    points:
+      - - 103.7714909
+        - 1.2988736
+      - - 103.7717041
+        - 1.2989393
+      - - 103.7718623
+        - 1.2986322
+      - - 103.772341
+        - 1.2984545
 
   - link:
     - location: "E1"
@@ -103,6 +239,11 @@ linkways:
       floor: 4
     shelter: true
     accessible: true
+    points:
+      - - 103.7708724
+        - 1.2994053
+      - - 103.7711673
+        - 1.2987405
 
   - link:
     - location: "E1A"
@@ -111,6 +252,15 @@ linkways:
       floor: -2
     shelter: true
     accessible: true
+    points:
+      - - 103.7708724
+        - 1.2994053
+      - - 103.7710647
+        - 1.2989749
+      - - 103.771345
+        - 1.2990969
+      - - 103.7712994
+        - 1.2991894
 
   - link:
     - location: "E1A"
@@ -119,6 +269,15 @@ linkways:
       floor: -1
     shelter: false
     accessible: true
+    points:
+      - - 103.7708724
+        - 1.2994053
+      - - 103.7710647
+        - 1.2989749
+      - - 103.771345
+        - 1.2990969
+      - - 103.7712994
+        - 1.2991894
 
   - link:
     - location: "E1A"
@@ -128,6 +287,15 @@ linkways:
     shelter: true
     accessible: true
     description: "also connected on other floors"
+    points:
+      - - 103.7708724
+        - 1.2994053
+      - - 103.7707887
+        - 1.2993873
+      - - 103.7705071
+        - 1.2999799
+      - - 103.7707374
+        - 1.3005256
 
   - link:
     - location: "EA"
@@ -136,6 +304,11 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+    points:
+      - - 103.7707374
+        - 1.3005256
+      - - 103.7714844
+        - 1.300307
 
   - link:
     - location: "EA"
@@ -144,6 +317,11 @@ linkways:
       floor: -2
     shelter: true
     accessible: true
+    points:
+      - - 103.7707374
+        - 1.3005256
+      - - 103.7712994
+        - 1.2991894
 
   - link:
     - location: "E8"
@@ -153,6 +331,17 @@ linkways:
     shelter: false
     accessible: true
     description: "via the road"
+    points:
+      - - 103.7725487
+        - 1.2991718
+      - - 103.7727477
+        - 1.2992411
+      - - 103.7729542
+        - 1.2987638
+      - - 103.773209
+        - 1.2988416
+      - - 103.7733297
+        - 1.2985943
 
   - link:
     - location: "E4A"
@@ -162,6 +351,13 @@ linkways:
     shelter: false
     accessible: false
     description: "via the footpath"
+    points:
+      - - 103.7726033
+        - 1.2986484
+      - - 103.773209
+        - 1.2988416
+      - - 103.7733297
+        - 1.2985943
 
   - link:
     - location: "E4"
@@ -170,6 +366,15 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+    points:
+    - - 103.772341
+      - 1.2984545
+    - - 103.7721781
+      - 1.2985155
+    - - 103.7720767
+      - 1.298154
+    - - 103.7724495
+      - 1.2980312
 
   - link:
     - location: "E5"
@@ -178,6 +383,15 @@ linkways:
       floor: 0
     shelter: true
     accessible: true
+    points:
+      - - 103.7724495
+        - 1.2980312
+      - - 103.772857
+        - 1.2978876
+      - - 103.7727967
+        - 1.2977159
+      - - 103.7730639
+        - 1.2976203
 
   - link:
     - location: "E5"
@@ -186,6 +400,17 @@ linkways:
       floor: 1
     shelter: false
     accessible: false
+    points:
+    - - 103.7724495
+      - 1.2980312
+    - - 103.7720767
+      - 1.298154
+    - - 103.7718862
+      - 1.2980365
+    - - 103.77163
+      - 1.2981118
+    - - 103.7715186
+      - 1.2980155
 
   - link:
     - location: "CLB Bridge"
@@ -194,6 +419,15 @@ linkways:
       floor: 6
     shelter: true
     accessible: false
+    points:
+      - - 103.7730639
+        - 1.2976203
+      - - 103.7733811
+        - 1.2975197
+      - - 103.7731745
+        - 1.2969753
+      - - 103.7731315
+        - 1.2967054
 
   - link:
     - location: "CLB"
@@ -202,6 +436,19 @@ linkways:
       floor: 2
     shelter: true
     accessible: true
+    points:
+      - - 103.7731315
+        - 1.2967054
+      - - 103.7730779
+        - 1.2963757
+      - - 103.7732174
+        - 1.2963248
+      - - 103.7730377
+        - 1.2958448
+      - - 103.7731316
+        - 1.2958019
+      - - 103.7732311
+        - 1.2955803
 
   - link:
     - location: "CLB"
@@ -210,6 +457,19 @@ linkways:
       floor: 1
     shelter: true
     accessible: false
+    points:
+      - - 103.7731315
+        - 1.2967054
+      - - 103.7730779
+        - 1.2963757
+      - - 103.7732174
+        - 1.2963248
+      - - 103.7730377
+        - 1.2958448
+      - - 103.7731316
+        - 1.2958019
+      - - 103.7732311
+        - 1.2955803
 
   - link:
     - location: "AS6"
@@ -218,6 +478,17 @@ linkways:
       floor: 2
     shelter: true
     accessible: false
+    points:
+      - - 103.7732311
+        - 1.2955803
+      - - 103.7733539
+        - 1.2953061
+      - - 103.7735926
+        - 1.2954255
+      - - 103.7738005
+        - 1.2951783
+      - - 103.7739176
+        - 1.2949056
 
   - link:
     - location: "AS6"
@@ -226,6 +497,17 @@ linkways:
       floor: 1
     shelter: false
     accessible: true
+    points:
+      - - 103.7732311
+        - 1.2955803
+      - - 103.7733539
+        - 1.2953061
+      - - 103.7735926
+        - 1.2954255
+      - - 103.7738005
+        - 1.2951783
+      - - 103.7739176
+        - 1.2949056
 
   - link:
     - location: "COM1"
@@ -235,6 +517,15 @@ linkways:
     shelter: true
     accessible: true
     description: "may require student card; also connected on the 2nd floor"
+    points:
+      - - 103.7740374
+        - 1.2943257
+      - - 103.7741148
+        - 1.2945424
+      - - 103.7740276
+        - 1.2946416
+      - - 103.7739176
+        - 1.2949056
 
   - link:
     - location: "COM1"
@@ -243,6 +534,15 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+    points:
+      - - 103.7739176
+        - 1.2949056
+      - - 103.7740276
+        - 1.2946416
+      - - 103.7741148
+        - 1.2945424
+      - - 103.7746171
+        - 1.2947627
 
   - link:
     - location: "COM2"
@@ -251,3 +551,10 @@ linkways:
       floor: 1
     shelter: true
     accessible: true
+    points:
+      - - 103.7740374
+        - 1.2943257
+      - - 103.7741148
+        - 1.2945424
+      - - 103.7746171
+        - 1.2947627
