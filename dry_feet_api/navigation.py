@@ -6,17 +6,18 @@ DATA_YAML_FILE = 'data/linkways.yaml'
 
 Location = str
 Step = Dict[str, str]
-
+Point = List[float]
 
 class Edge:
     def __init__(self, raw_edge: Dict[str, Any]) -> None:
         endpoint1, endpoint2 = raw_edge['link']
-        self.loc1 = endpoint1['location']
-        self.floor1 = endpoint1['floor']
-        self.loc2 = endpoint2['location']
-        self.floor2 = endpoint2['floor']
-        self.sheltered = raw_edge['shelter']
-        self.accessible = raw_edge['accessible']
+        self.loc1: Location = endpoint1['location']
+        self.floor1: int = endpoint1['floor']
+        self.loc2: Location = endpoint2['location']
+        self.floor2: int = endpoint2['floor']
+        self.sheltered: bool = raw_edge['shelter']
+        self.accessible: bool = raw_edge['accessible']
+        self.points: List[Point] = raw_edge['points']
 
     def get_locations(self) -> Tuple[Location, Location]:
         return self.loc1, self.loc2
@@ -27,6 +28,8 @@ class Edge:
     def get_floor(self, location: Location):
         return self.floor1 if self.loc1 == location else self.floor2
 
+    def get_points(self, start_location: Location):
+        return self.points if self.loc1 == start_location else self.points[::-1]
 
 class Navigation:
     def __init__(self) -> None:
@@ -47,14 +50,14 @@ class Navigation:
             src_location: Location,
             dst_location: Location,
             sheltered: bool,
-            accessible: bool) -> Optional[List[Step]]:
+            accessible: bool) -> Optional[Tuple[List[Step], List[Point]]]:
         if src_location == dst_location:
-            return []
+            return None
         parent_edges = self._bfs(
             src_location, dst_location, sheltered, accessible)
         if parent_edges is None:
             return None
-        return self._get_route(parent_edges, dst_location)
+        return self._get_route_and_points(parent_edges, dst_location)
 
     def _bfs(
             self,
@@ -69,7 +72,8 @@ class Navigation:
             next_queue: List[Location] = []
             for location in queue:
                 for edge in self.graph[location]:
-                    if (sheltered and not edge.sheltered) or (accessible and not edge.accessible):
+                    if ((sheltered and not edge.sheltered) or
+                        (accessible and not edge.accessible)):
                         continue
                     next_location = edge.get_other_location(location)
                     if next_location in parent_edges:
@@ -81,19 +85,25 @@ class Navigation:
             queue = next_queue
         return None
 
-    def _get_route(
+    def _get_route_and_points(
             self,
             parent_edges: Dict[Location, Optional[Edge]],
-            dst_location: Location) -> List[Step]:
+            dst_location: Location) -> Tuple[List[Step], List[Point]]:
         curr_location = dst_location
         edge = parent_edges[curr_location]
         route: List[Step] = []
+        points: List[Point] = []
         while edge is not None:
             prev_location = edge.get_other_location(curr_location)
             route.append(self._format_step(edge, prev_location, curr_location))
+            edge_points = edge.get_points(curr_location)
+            while points and points[-1] == edge_points[0]:
+                points.pop()
+                points.append(edge_points[0])
+            points.extend(edge_points)
             curr_location = prev_location
             edge = parent_edges[curr_location]
-        return route[::-1]
+        return route[::-1], points[::-1]
 
     def _format_step(self, edge: Edge, start_location: Location, end_location: Location) -> Step:
         description = (

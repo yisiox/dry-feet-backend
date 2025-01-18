@@ -17,7 +17,11 @@ def find_path():
     dst_location = request.args.get('to')
     sheltered = 'sheltered' in request.args
     accessible = 'accessible' in request.args
-    route = nus_navigation.find_path(src_location, dst_location, sheltered, accessible)
-    if route is None:
-        return jsonify({"possible": False, "route": route})
-    return jsonify({"possible": True, "route": route})
+    path_result = nus_navigation.find_path(src_location, dst_location, sheltered, accessible)
+    if path_result is None:
+        route = None
+        points = None
+    else:
+        route, points = path_result
+    response = {"possible": route is not None, "route": route, "points": points}
+    return jsonify(response)
