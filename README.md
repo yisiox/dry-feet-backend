@@ -1,7 +1,7 @@
 # Dry Feet Backend
 
-This is the backend for the [Dry Feet project](https://github.com/ryanozx/dry-feet) written using Flask.
-
+This is the backend for the [Dri-Feet project](https://github.com/ryanozx/dry-feet) written using Flask.
+The name is intentionally different to distinguish the repositories. It is also a pun referencing Dri-FIT.
 
 ## Quick Start
 
