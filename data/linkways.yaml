@@ -400,6 +400,7 @@ linkways:
       floor: 1
     shelter: false
     accessible: false
+    description: "via the long staircase"
     points:
     - - 103.7724495
       - 1.2980312
@@ -457,6 +458,7 @@ linkways:
       floor: 1
     shelter: true
     accessible: false
+    description: "the ground floors share a staircase"
     points:
       - - 103.7731315
         - 1.2967054
