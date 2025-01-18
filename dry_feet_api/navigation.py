@@ -17,6 +17,7 @@ class Edge:
         self.floor2: int = endpoint2['floor']
         self.sheltered: bool = raw_edge['shelter']
         self.accessible: bool = raw_edge['accessible']
+        self.description: Optional[str] = raw_edge.get('description', None)
         self.points: List[Point] = raw_edge['points']
 
     def get_locations(self) -> Tuple[Location, Location]:
@@ -97,9 +98,8 @@ class Navigation:
             prev_location = edge.get_other_location(curr_location)
             route.append(self._format_step(edge, prev_location, curr_location))
             edge_points = edge.get_points(curr_location)
-            while points and edge_points and points[-1] == edge_points[0]:
+            if points and points[-1] == edge_points[0]:
                 points.pop()
-                points.append(edge_points.pop(0))
             points.extend(edge_points)
             curr_location = prev_location
             edge = parent_edges[curr_location]
@@ -108,9 +108,9 @@ class Navigation:
     def _format_step(self, edge: Edge, start_location: Location, end_location: Location) -> Step:
         description = (
             f'From {self._format_location(edge, start_location)}, ' +
-            f'cross over to {self._format_location(edge, end_location)}')
-        step = {'from': start_location,
-                'to': end_location, 'description': description}
+            f'cross over to {self._format_location(edge, end_location)}' +
+            (f' ({edge.description})' if edge.description is not None else ''))
+        step = {'from': start_location, 'to': end_location, 'description': description}
         return step
 
     def _format_location(self, edge: Edge, location: Location) -> str:
