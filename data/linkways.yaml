@@ -71,7 +71,7 @@ linkways:
       floor: 2
     shelter: true
     accessible: true
-  
+
   - link:
     - location: "E2"
       floor: 2
@@ -144,7 +144,7 @@ linkways:
       floor: -2
     shelter: true
     accessible: true
-  
+
   - link:
     - location: "E8"
       floor: 1
@@ -184,8 +184,8 @@ linkways:
       floor: 1
     - location: "Techno Edge"
       floor: 1
-    - shelter: false
-    - accessible: false
+    shelter: false
+    accessible: false
 
   - link:
     - location: "CLB Bridge"
