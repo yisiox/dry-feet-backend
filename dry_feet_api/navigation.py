@@ -97,9 +97,9 @@ class Navigation:
             prev_location = edge.get_other_location(curr_location)
             route.append(self._format_step(edge, prev_location, curr_location))
             edge_points = edge.get_points(curr_location)
-            while points and points[-1] == edge_points[0]:
+            while points and edge_points and points[-1] == edge_points[0]:
                 points.pop()
-                points.append(edge_points[0])
+                points.append(edge_points.pop(0))
             points.extend(edge_points)
             curr_location = prev_location
             edge = parent_edges[curr_location]
