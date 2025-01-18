@@ -7,6 +7,7 @@ DATA_YAML_FILE = 'data/linkways.yaml'
 Location = str
 Step = Dict[str, str]
 
+
 class Edge:
     def __init__(self, raw_edge: Dict[str, Any]) -> None:
         endpoint1, endpoint2 = raw_edge['link']
@@ -21,18 +22,17 @@ class Edge:
         return self.loc1, self.loc2
 
     def get_other_location(self, location: Location):
-        if self.loc1 == location:
-            return self.loc2
-        else:
-            return self.loc1
+        return self.loc2 if self.loc1 == location else self.loc1
 
     def get_floor(self, location: Location):
-        return self.floor1 if location == self.loc1 else self.floor2
+        return self.floor1 if self.loc1 == location else self.floor2
+
 
 class Navigation:
     def __init__(self) -> None:
         with open(DATA_YAML_FILE, 'r') as f:
-            edges: list[Edge] = [Edge(raw_edge) for raw_edge in yaml.load(f)['linkways']]
+            edges: list[Edge] = [Edge(raw_edge)
+                                 for raw_edge in yaml.load(f)['linkways']]
             self.graph: dict[Location, list[Edge]] = defaultdict(list)
             for edge in edges:
                 location1, location2 = edge.get_locations()
@@ -50,7 +50,8 @@ class Navigation:
             accessible: bool) -> Optional[List[Step]]:
         if src_location == dst_location:
             return []
-        parent_edges = self._bfs(src_location, dst_location, sheltered, accessible)
+        parent_edges = self._bfs(
+            src_location, dst_location, sheltered, accessible)
         if parent_edges is None:
             return None
         return self._get_route(parent_edges, dst_location)
@@ -61,7 +62,6 @@ class Navigation:
             dst_location: Location,
             sheltered: bool,
             accessible: bool) -> Optional[Dict[Location, Optional[Edge]]]:
-
         parent_edges: Dict[Location, Optional[Edge]] = {}
         parent_edges[src_location] = None
         queue: List[Location] = [src_location]
@@ -85,7 +85,6 @@ class Navigation:
             self,
             parent_edges: Dict[Location, Optional[Edge]],
             dst_location: Location) -> List[Step]:
-
         curr_location = dst_location
         edge = parent_edges[curr_location]
         route: List[Step] = []
@@ -100,7 +99,8 @@ class Navigation:
         description = (
             f'From {self._format_location(edge, start_location)}, ' +
             f'cross over to {self._format_location(edge, end_location)}')
-        step = {'from': start_location, 'to': end_location, 'description': description}
+        step = {'from': start_location,
+                'to': end_location, 'description': description}
         return step
 
     def _format_location(self, edge: Edge, location: Location) -> str:
