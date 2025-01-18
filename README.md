@@ -1,6 +1,18 @@
 # Dry Feet Backend
 
-This is the backend for the Dry Feet project written using Flask. To run it, first install Flask using `pip`, then start the development server by running this command:
+This is the backend for the [Dry Feet project](https://github.com/ryanozx/dry-feet) written using Flask. 
+
+
+## Quick Start
+
+First, ensure that you have installed Flask and PyYAML.
+
+```
+pip install flask
+pip install pyyaml
+```
+
+To start the development server:
 
 ```bash
 flask --app dry_feet_api run
