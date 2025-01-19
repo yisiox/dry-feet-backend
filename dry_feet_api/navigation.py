@@ -8,6 +8,9 @@ Location = str
 Step = Dict[str, str]
 Point = List[float]
 
+def dist(p1: Point, p2: Point):
+    return ((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2) ** 0.5
+
 class Edge:
     def __init__(self, raw_edge: Dict[str, Any]) -> None:
         endpoint1, endpoint2 = raw_edge['link']
@@ -103,6 +106,20 @@ class Navigation:
             points.extend(edge_points)
             curr_location = prev_location
             edge = parent_edges[curr_location]
+
+
+        EPS = 1e-9
+        res_points = []
+
+        for p in points:
+            for i in range(len(res_points)):
+                if dist(p, res_points[i]) < EPS:
+                    res_points = res_points[:i]
+                    break
+            res_points.append(p)
+
+        return route[::-1], res_points[::-1]
+
         return route[::-1], points[::-1]
 
     def _format_step(self, edge: Edge, start_location: Location, end_location: Location) -> Step:
